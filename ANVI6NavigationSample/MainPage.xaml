@@ -56,7 +56,7 @@
                         <TextBlock Style="{StaticResource TitleTextBlockStyle}"
                            FontSize="28"
                            VerticalAlignment="Center"
-                           Text="Welcome"/>
+                           Text="Bienvenido"/>
                         <CommandBar Grid.Column="1"
                             HorizontalAlignment="Right"
                             VerticalAlignment="Top"
