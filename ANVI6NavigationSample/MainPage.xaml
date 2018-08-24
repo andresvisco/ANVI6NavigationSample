@@ -69,7 +69,10 @@
                 </DataTemplate>
             </NavigationView.HeaderTemplate>
 
-            <Frame x:Name="ContentFrame" Margin="24"/>
+            <Frame x:Name="ContentFrame" Margin="24">
+                
+                
+            </Frame>
 
         </NavigationView>
     </Grid>

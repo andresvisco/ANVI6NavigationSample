@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -35,9 +36,36 @@ namespace ANVI6NavigationSample
         private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
 
-        }
+            
 
-        private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+
+
+                if (args.IsSettingsInvoked)
+                {
+                    ContentFrame.Navigate(typeof(UISettings));
+                }
+                else
+                {
+                    var item = sender.MenuItems.OfType<NavigationViewItem>().First(x => (string)x.Content == (string)args.InvokedItem);
+                    NavView_Navigate(item as NavigationViewItem);
+                }
+            }
+            private void NavView_Navigate(NavigationViewItem item)
+            {
+
+                switch (item.Tag)
+                {
+                    case "apps":
+
+                        ContentFrame.Navigate(typeof(View1));
+                        break;
+                    
+
+
+                }
+            }
+
+            private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
 
         }
