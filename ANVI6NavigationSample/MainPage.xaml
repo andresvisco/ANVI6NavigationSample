@@ -8,19 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="{x:Bind NavView.CompactModeThresholdWidth}" />
-                    </VisualState.StateTriggers>
-
-                    <VisualState.Setters>
-                        <Setter Target="NavView.PaneDisplayMode" Value="Top"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+        
 
         <NavigationView x:Name="NavView"
                     ItemInvoked="NavView_ItemInvoked"
@@ -38,7 +26,7 @@
                 <NavigationViewItemSeparator/>
                 <NavigationViewItemHeader Content="Main pages"/>
                 <NavigationViewItem Icon="AllApps" Content="Apps" x:Name="apps" Tag="apps"/>
-                <NavigationViewItem Icon="Video" Content="Games" x:Name="games" Tag="games"/>
+                <NavigationViewItem Icon="Video" Content="Games" x:Name="games" Tag="frameForm"/>
                 <NavigationViewItem Icon="Audio" Content="Music" x:Name="music" Tag="music"/>
             </NavigationView.MenuItems>
 

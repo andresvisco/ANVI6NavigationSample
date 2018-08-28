@@ -55,11 +55,15 @@ namespace ANVI6NavigationSample
 
                 switch (item.Tag)
                 {
-                    case "apps":
+                case "apps":
 
                         ContentFrame.Navigate(typeof(View1));
                         break;
-                    
+
+                case "frameForm":
+                    ContentFrame.Navigate(typeof(FrameForm));
+                    break;
+
 
 
                 }

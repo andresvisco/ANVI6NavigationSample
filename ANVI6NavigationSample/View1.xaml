@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView Width="Auto">
+        <GridView Width="Auto" ItemClick="GridView_ItemClick" IsItemClickEnabled="True">
             <GridViewItem Content="Item 1" Width="100"></GridViewItem>
             <GridViewItem Content="Item 2" Width="100"></GridViewItem>
             <GridViewItem Content="Item 3" Width="100"></GridViewItem>
