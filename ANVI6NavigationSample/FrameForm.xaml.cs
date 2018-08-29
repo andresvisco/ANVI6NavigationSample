@@ -42,7 +42,7 @@ namespace ANVI6NavigationSample
             pvtControl.SelectedItem = pvtCustomers;
         }
 
-        public string DatosPersistidosJsonBegin = "{\"datos\"";
+        
         public string DatosPersistidos = string.Empty;
         private void guardarPersistencia(string datosAMantener)
         {
