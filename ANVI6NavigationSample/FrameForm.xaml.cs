@@ -28,5 +28,32 @@ namespace ANVI6NavigationSample
             
             
         }
+
+        private void AppBarToggleButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //guardo json
+            var elementosFormEtapa1 = OrdersName.Text;
+            guardarPersistencia(elementosFormEtapa1);
+            pvtControl.SelectedItem = pvtCustomers;
+        }
+
+        public string DatosPersistidosJsonBegin = "{\"datos\"";
+        public string DatosPersistidos = string.Empty;
+        private void guardarPersistencia(string datosAMantener)
+        {
+            DatosPersistidos += datosAMantener;
+        }
+
+        private void ButtonCustomers_Click(object sender, RoutedEventArgs e)
+        {
+            var elementosFormEtapa2 = CustomerName.Text;
+            guardarPersistencia(elementosFormEtapa2);
+            pvtControl.SelectedItem = pvtInvoices;
+        }
     }
 }

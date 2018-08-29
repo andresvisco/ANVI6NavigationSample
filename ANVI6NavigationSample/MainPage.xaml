@@ -8,14 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
+
 
         <NavigationView x:Name="NavView"
                     ItemInvoked="NavView_ItemInvoked"
                     IsSettingsVisible="True"
                     Loaded="NavView_Loaded"
                     BackRequested="NavView_BackRequested"
-                    Header="Bienvenido">
+                    >
 
             <NavigationView.MenuItems>
                 <NavigationViewItem Content="Home" x:Name="home" Tag="home">
