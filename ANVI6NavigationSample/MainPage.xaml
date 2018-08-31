@@ -27,7 +27,7 @@
                 <NavigationViewItemHeader Content="Main pages"/>
                 <NavigationViewItem Icon="AllApps" Content="Apps" x:Name="apps" Tag="apps"/>
                 <NavigationViewItem Icon="Video" Content="Games" x:Name="games" Tag="frameForm"/>
-                <NavigationViewItem Icon="Audio" Content="Music" x:Name="music" Tag="music"/>
+                <NavigationViewItem Icon="Audio" Content="TestPivot" x:Name="custom" Tag="customer"/>
             </NavigationView.MenuItems>
 
             <NavigationView.AutoSuggestBox>

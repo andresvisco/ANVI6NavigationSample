@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ANVI6NavigationSample.Views;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -64,9 +65,11 @@ namespace ANVI6NavigationSample
                     ContentFrame.Navigate(typeof(FrameForm));
                     break;
 
+                case "customer":
+                    ContentFrame.Navigate(typeof(CustomerView));
+                    break;
 
-
-                }
+            }
             }
 
             private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)

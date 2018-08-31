@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="ANVI6NavigationSample.Views.CustomerView"
+
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ANVI6NavigationSample.Views"
+    xmlns:data="using:ANVI6NavigationSample.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:customControl="using:ANVI6NavigationSample.CustomControls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Pivot Background="{ThemeResource AppBarBackgroundThemeBrush}"   
+               x:Name="pvtMain"
+               >
+            <!--agregar los tabs a una lista-->
+
+            <PivotItem Header="Orders" Margin="0">
+               
+            </PivotItem>
+            <PivotItem Header="Customers" Margin="0" x:Name="pvtCustomers">
+
+                <GridView VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      Margin="16"
+                      ItemsSource="{x:Bind customersList}">
+
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="data:Customer"  >
+
+                            <customControl:CustomerControl  FirstName="{x:Bind FirstName}"
+                                                    LastName="{x:Bind LastName}"
+                                                    Company="{x:Bind Company}" />
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+               
+            </PivotItem>
+            <PivotItem Header="Invoices" x:Name="pvtInvoices">
+                
+            </PivotItem>
+            <PivotItem Header="Stock"/>
+
+        </Pivot>
+
+
+        <!--<StackPanel>
+            <TextBlock Text="Customers:"
+                       FontSize="36"
+                       Margin="16" />
+
+            <Rectangle Fill="LightGray"
+                       Height="3"
+                       Margin="16,0,16,0" />
+
+            <GridView VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      Margin="16"
+                      ItemsSource="{x:Bind customersList}">
+
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="data:Customer">
+
+                         Customer 
+                        <customControl:CustomerControl FirstName="{x:Bind FirstName}"
+                                                      LastName="{x:Bind LastName}"
+                                                      Company="{x:Bind Company}" />
+
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </StackPanel>-->
+    </Grid>
+</Page>
