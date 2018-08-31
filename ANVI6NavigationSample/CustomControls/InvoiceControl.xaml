@@ -1,0 +1,33 @@
+﻿<UserControl x:Name="userControlInvoice"
+    x:Class="ANVI6NavigationSample.CustomControls.InvoiceControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ANVI6NavigationSample.InvoiceControl"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Background="White"
+                    Height="280"
+                    Width="200"
+                    Margin="8">
+
+            <StackPanel Orientation="Horizontal"
+                        Padding="12,12,12,8">
+
+                <TextBlock FontSize="20"
+                           Text="{Binding IdInvoice, 
+                                  ElementName=userControlInvoice}" />
+
+                <TextBlock Padding="6,0,0,0"
+                           FontSize="20"
+                           Text="{Binding Descripcion, 
+                                  ElementName=userControlInvoice}"/>
+            </StackPanel>
+
+          
+        </StackPanel>
+    </Grid>
+</UserControl>

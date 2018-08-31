@@ -26,6 +26,8 @@ namespace ANVI6NavigationSample.Views
     {
         ObservableCollection<Customer> customersList { get; set; }
 
+        ObservableCollection<Invoice> invoiceList { get; set; }
+
         public CustomerView()
         {
             this.InitializeComponent();
@@ -50,6 +52,16 @@ namespace ANVI6NavigationSample.Views
 
             customersList.Add(almir);
             customersList.Add(emir);
+
+            Invoice inv = new Invoice
+            {
+                IdInvoice = "6732",
+                Descripcion = "Descripcion Invoice",
+
+            };
+            invoiceList = new ObservableCollection<Invoice>();
+
+            invoiceList.Add(inv);
         }
     }
 

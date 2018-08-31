@@ -1,6 +1,5 @@
 ﻿<Page
     x:Class="ANVI6NavigationSample.Views.CustomerView"
-
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ANVI6NavigationSample.Views"
@@ -39,7 +38,19 @@
                
             </PivotItem>
             <PivotItem Header="Invoices" x:Name="pvtInvoices">
-                
+                <GridView VerticalAlignment="Top"
+                      HorizontalAlignment="Left"
+                      Margin="16"
+                      ItemsSource="{x:Bind invoiceList}">
+
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="data:Invoice"  >
+
+                            <customControl:InvoiceControl  IdInvoice="{x:Bind IdInvoice}"
+                                                    Descripcion="{x:Bind Descripcion}"/>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
             </PivotItem>
             <PivotItem Header="Stock"/>
 
